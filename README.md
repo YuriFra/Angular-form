@@ -59,9 +59,6 @@ A POST request to add a friend to your friend list.
     - An amount of random friends from your list
     - A list of all the people between the age of 30 and 40
     - ...
-- Make your node server push the data to a database. Warning:
-    - Is it vulnerable for SQL injection?
-    - Is it vulnerable for cross-site scripting?
 
 
 ### Steps
