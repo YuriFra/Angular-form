@@ -1,4 +1,4 @@
-#Basic Angular Form
+# Basic Angular Form
 
 - Repository: `basic-angular-form`
 - Type of Challenge: `Learning`
