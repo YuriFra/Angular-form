@@ -75,7 +75,7 @@ A POST request to add a friend to your friend list.
     - The view you see in the page is produced by the combination of that <strong>template</strong> and the <strong>component</strong> that brings the logic to the template.
     - You should never pay attention to .spec files, these are for unit testing which is out of scope for this exercise.
 7. Empty the "AppComponent" class and the template. The template file should be completely empty. Inside of the AppComponent class you'll write your logic and in the template you can use it and write the html.
-8. In the HTML file, add a form with the required inputs at least. Go take a look at the must haves to see which are required. Don't forget a submit button, make it a regular button, <strong>not an input type button<strong>!
+8. In the HTML file, add a form with the required inputs at least. Go take a look at the must haves to see which are required. Don't forget a submit button, make it a regular button, <strong>not an input type button</strong>!
 9. You might have already added a select input for the languages with the options inside of it. This can be optimised by putting the names of the languages inside of an array in your component class. Next, you can use the ngFor loop to generate all the options, way more efficient right?
 10. Now you will have to bind the data to your form
     - In your app.module.ts, import the FormsModule from @angular/forms. Also add it to the imports array.
