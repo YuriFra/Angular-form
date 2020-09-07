@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  font-family: Cambria, Georgia, serif;
+}
+h1, h2 {
+  color: #369;
+}
+.toolbar {
+  background-color: #1bd78c;
+}
+.title {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+}
+#foot {
+  color: #fff;
+  background-color: #1bd78c;
+}
+
