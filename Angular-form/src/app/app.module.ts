@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { FormComponent } from './form/form.component';
-import { FormService } from './form.service';
+import { AddFriendService } from './addFriend.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,9 +17,10 @@ import { FormService } from './form.service';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [FormService],
+  providers: [AddFriendService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

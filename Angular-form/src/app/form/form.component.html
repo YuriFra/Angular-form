@@ -2,7 +2,7 @@
 <!-- Input form -->
 <div class="container">
   <h2 class="m-2">Add a friend</h2>
-      <form [formGroup]="FormData" novalidate>
+      <form [formGroup]="FormData" novalidate (ngSubmit)="submitData()">
         <div class="form-group">
           <label for="firstName">First Name
             <input type="text" class="form-control" id="firstName" name="firstName"
