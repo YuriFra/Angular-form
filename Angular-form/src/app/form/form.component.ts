@@ -20,10 +20,11 @@ export class FormComponent implements OnInit {
 
   ngOnInit(): void {
     this.FormData = this.builder.group({
-      firstName: new FormControl('', [Validators.required]),
-      lastName: new FormControl('', [Validators.required]),
-      email: new FormControl('', [Validators.compose([Validators.required, Validators.email])]),
-      phone: new FormControl('', [Validators.compose([Validators.pattern('(32)[0-9]{9}')])])
+      firstName: new FormControl('', [Validators.required, Validators.pattern('^([^0-9]*)$')]),
+      lastName: new FormControl('', [Validators.required, Validators.pattern('^([^0-9]*)$')]),
+      email: new FormControl('', [Validators.required, Validators.email]),
+      phone: new FormControl('', [Validators.required, Validators.pattern('^[0-9]{8,10}$')]),
+      language: new FormControl('', [Validators.required])
     });
   }
 }
