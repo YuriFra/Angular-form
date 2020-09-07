@@ -3,7 +3,6 @@
 - Repository: `basic-angular-form`
 - Type of Challenge: `Learning`
 - Duration: `3 days`
-- Deadline: `04/09/2020 16:00 PM`
 - Solo challenge
 
 ## Learning Objectives 
