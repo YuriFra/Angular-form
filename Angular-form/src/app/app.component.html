@@ -1,12 +1,11 @@
 <!-- Header -->
-<header class="toolbar" role="banner">
-  <h1 class="title text-center mt-5">{{title}}</h1>
+<header id="header" class="mt-0" role="banner">
+  <h1 class="title text-center pt-4">{{title}}</h1>
 </header>
-
-<app-form></app-form>
-<div *ngFor="let friend of allFriends">
-  {{friend.firstname}}
-</div>
-
+<nav class="nav justify-content-center">
+  <a class="nav-link my-2" routerLink="/">Home</a>
+  <a class="nav-link my-2" routerLink="/add">Add a friend</a>
+</nav>
 <router-outlet></router-outlet>
+
 

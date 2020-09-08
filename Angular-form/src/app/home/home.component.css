@@ -1,0 +1,8 @@
+.card {
+  width: 300px;
+  background-color: #9fdbbc;
+}
+.card-title {
+  color: #93711a;
+  font-weight: bold;
+}

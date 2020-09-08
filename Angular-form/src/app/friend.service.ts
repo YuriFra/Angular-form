@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class FriendService {
   urlAdd = 'http://localhost:9100/addFriend';
+  allFriends: any = [];
 
   constructor(public http: HttpClient) { }
 
@@ -21,6 +22,7 @@ export class FriendService {
         'Content-Type': 'application/json'
       })
     };
-    return await this.http.get(url, options).toPromise();
+    return await this.http.get(url, options).toPromise()
+      .then(data => this.allFriends = data);
   }
 }
