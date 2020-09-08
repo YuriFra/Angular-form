@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { FormComponent } from './form/form.component';
-import { AddFriendService } from './addFriend.service';
+import { FriendService } from './friend.service';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -20,7 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [AddFriendService],
+  providers: [FriendService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FriendService } from './friend.service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Friends book';
+  urlGet = 'http://localhost:9100/allFriends';
+  allFriends = this.friendService.getAllFriends(this.urlGet);
+
+  constructor(private friendService: FriendService) {
+  }
 
 }

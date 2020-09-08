@@ -108,7 +108,7 @@ A POST request to add a friend to your friend list.
     - If you add the ngSubmit property to your form, you can bind a function to it and use that function in your component class to trigger it on submit. This is how it looks like: <code>(ngSubmit)="yourFunction()"</code>.
     - In your component class, define the function and console log your friend model. Now when you submit you'll see the data appear in your console.
     - To add this friend to your friendlist server, we'll need to make a service for it. We'll use the cli for this and input the command <code>ng g s addFriend</code>. This means, a"ng"ular "g"enerate "s"ervice with name "addFriendService", when you generate a service you'll see that after the name you've given it will automatically add "Service" after it.
-    - In your newly generated addFriend.service.ts file, import the HttpClient. In your addFriend class, add a new private property called http to the constructor. Typehint it to be of type HttpClient.
+    - In your newly generated friend.service.ts file, import the HttpClient. In your addFriend class, add a new private property called http to the constructor. Typehint it to be of type HttpClient.
     - You'll also have to import the HttpClientModule in your app.module.ts, also add it to the imports array below.
 15. We now have our data on submit and we're in a position to start http requests. Now we want to post our data to a server.
     - In the service, make a method called addFriend and give it a parameter, typehint it to be of the Friend type. You'll also need to import Friend.

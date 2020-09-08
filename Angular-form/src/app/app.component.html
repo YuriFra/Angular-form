@@ -4,6 +4,9 @@
 </header>
 
 <app-form></app-form>
+<div *ngFor="let friend of allFriends">
+  {{friend.firstname}}
+</div>
 
 <router-outlet></router-outlet>
 

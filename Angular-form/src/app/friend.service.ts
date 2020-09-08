@@ -1,0 +1,26 @@
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Friend } from './friend';
+import { Observable } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class FriendService {
+  urlAdd = 'http://localhost:9100/addFriend';
+
+  constructor(public http: HttpClient) { }
+
+  addFriend(friend: Friend): Observable<any> {
+    return this.http.post(this.urlAdd, friend);
+  }
+
+  async getAllFriends(url: string): Promise <any> {
+    const options = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+    return await this.http.get(url, options).toPromise();
+  }
+}
