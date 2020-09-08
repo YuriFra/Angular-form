@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { FriendService } from '../friend.service';
-import { Friend } from '../friend';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,7 +13,6 @@ export class FormComponent implements OnInit {
   languages = [
     'HTML', 'CSS', 'Javascript', 'PHP', 'Python', 'Java'
   ];
-  friendModel = new Friend('', '', '', '', '');
   allFriends: any = [];
 
   constructor(private builder: FormBuilder, private friendService: FriendService, private router: Router) { }
