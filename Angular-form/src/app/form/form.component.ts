@@ -14,6 +14,7 @@ export class FormComponent implements OnInit {
     'HTML', 'CSS', 'Javascript', 'PHP', 'Python', 'Java'
   ];
   allFriends: any = [];
+  deleteFriend = new FormControl('', [Validators.required, Validators.email]);
 
   constructor(private builder: FormBuilder, private friendService: FriendService, private router: Router) { }
 
@@ -24,15 +25,14 @@ export class FormComponent implements OnInit {
       email: new FormControl('', [Validators.required, Validators.email]),
       phone: new FormControl('', [Validators.required, Validators.pattern('^[0-9 ]{9,}$')]),
       language: new FormControl('', [Validators.required]),
-      bestFriend: new FormControl('')
+      bestFriend: new FormControl(false)
     });
   }
 
   submitData(): void {
     this.friendService.addFriend(this.FormData.value).subscribe(
       data => {
-        // tslint:disable-next-line:no-unused-expression
-        this.allFriends;
+        this.allFriends = data;
         this.router.navigate(['/home']);
       },
         error => {
@@ -45,5 +45,17 @@ export class FormComponent implements OnInit {
     if (event.target.checked) {
       this.FormData.value.bestFriend = true;
     }
+  }
+
+  deleteData(): void {
+    this.friendService.deleteFriend(this.deleteFriend.value).subscribe(
+      data => {
+        // tslint:disable-next-line:no-unused-expression
+        this.allFriends = data;
+        this.router.navigate(['/home']);
+      },
+      error => {
+        console.log(error);
+      });
   }
 }

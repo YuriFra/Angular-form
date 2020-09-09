@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class FriendService {
   urlAdd = 'http://localhost:9100/addFriend';
+  urlDelete = 'http://localhost:9100/delete';
   allFriends: any = [];
   bestFriends: any = [];
 
@@ -15,6 +16,10 @@ export class FriendService {
 
   addFriend(friend: Friend): Observable<any> {
     return this.http.post(this.urlAdd, friend);
+  }
+
+  deleteFriend(email): Observable<any> {
+    return this.http.post(this.urlDelete, email);
   }
 
   async getAllFriends(url: string): Promise <any> {

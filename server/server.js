@@ -17,12 +17,7 @@ app.all("/*", function(req, res, next){
 
 let allFriends = [{firstName: 'Coach', lastName: 'Tim', email: 'tim.broos@becode.org', phone: '0469420666', signatureMove: 'Yeet', language: 'Javascript'}, {firstName: 'Yuri', lastName: 'Franken', email: 'yuri@becode.org', phone: '036640768', language: 'Phyton', bestFriend: true}];
 
-function checkBest(el) {
-    return el.bestFriend === true;
-}
-
-// Below you can define how your API handles a get or a post request.
-// Try sending a get request to the root, you should get a "Hello from server" back.
+//Define how your API handles a get or a post request.
 
 app.get('/', function (request, response) {
     response.send('Hello from server');
@@ -40,8 +35,15 @@ app.post('/addFriend', function (request, response) {
     allFriends.push(request.body)
     response.status(200).send({"message": "Friend added!"});
 });
+
+app.post('/delete', function (request, response) {
+    let id = allFriends.indexOf(request.body);
+    allFriends.splice(id, 1);
+    response.status(200).send({"message": "Friend deleted!"});
+});
+
 app.get('/bestFriends', function (request, response) {
-    response.send(allFriends.filter(checkBest));
+    response.send(allFriends.filter(el => el.bestFriend === true));
 });
 
 app.listen(PORT, function () {});
