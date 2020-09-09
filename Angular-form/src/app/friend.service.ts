@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 export class FriendService {
   urlAdd = 'http://localhost:9100/addFriend';
   allFriends: any = [];
+  bestFriends: any = [];
 
   constructor(public http: HttpClient) { }
 
@@ -24,5 +25,15 @@ export class FriendService {
     };
     return await this.http.get(url, options).toPromise()
       .then(data => this.allFriends = data);
+  }
+
+  async getBestFriends(url: string): Promise <any> {
+    const options = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+    return await this.http.get(url, options).toPromise()
+      .then(data => this.bestFriends = data);
   }
 }

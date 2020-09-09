@@ -41,6 +41,13 @@
             </select>
           </label>
         </div>
+        <div class="form-group">
+          <label class="check" for="bestFriend">Best friend
+          <input type="checkbox" class="form-control" id="bestFriend" name="bestFriend"
+                 formControlName="bestFriend" value="false" (change)="toggleSelection($event)">
+          <span class="checkmark"></span>
+          </label>
+        </div>
         <p>Form status: {{ FormData.status }}</p>
         <button type="submit" class="btn btn-success mb-3" [disabled]="!FormData.valid">Submit</button>
       </form>

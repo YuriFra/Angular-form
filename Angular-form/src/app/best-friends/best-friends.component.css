@@ -1,0 +1,10 @@
+.card {
+  width: 300px;
+  background-image: linear-gradient(to bottom right, #9fdbbc, #c6e734);
+  border: 2px solid #825f0c;
+}
+.card-title {
+  color: #825f0c;
+  font-weight: bold;
+}
+

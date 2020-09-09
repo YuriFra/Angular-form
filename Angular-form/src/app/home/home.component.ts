@@ -7,12 +7,12 @@ import { FriendService } from '../friend.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  urlGet = 'http://localhost:9100/allFriends';
+  urlAll = 'http://localhost:9100/allFriends';
   allFriends: any = [];
 
   constructor(private friendService: FriendService) { }
 
   ngOnInit(): void {
-    this.friendService.getAllFriends(this.urlGet).then(data => this.allFriends = data);
+    this.friendService.getAllFriends(this.urlAll).then(data => this.allFriends = data);
   }
 }

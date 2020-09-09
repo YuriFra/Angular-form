@@ -23,7 +23,8 @@ export class FormComponent implements OnInit {
       lastName: new FormControl('', [Validators.required, Validators.pattern('^([^0-9]*)$')]),
       email: new FormControl('', [Validators.required, Validators.email]),
       phone: new FormControl('', [Validators.required, Validators.pattern('^[0-9 ]{9,}$')]),
-      language: new FormControl('', [Validators.required])
+      language: new FormControl('', [Validators.required]),
+      bestFriend: new FormControl('')
     });
   }
 
@@ -37,5 +38,12 @@ export class FormComponent implements OnInit {
         error => {
         console.log(error);
       });
+  }
+
+  // tslint:disable-next-line:typedef
+  toggleSelection(event) {
+    if (event.target.checked) {
+      this.FormData.value.bestFriend = true;
+    }
   }
 }
