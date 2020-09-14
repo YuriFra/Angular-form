@@ -40,8 +40,7 @@ export class FormComponent implements OnInit {
       });
   }
 
-  // tslint:disable-next-line:typedef
-  toggleSelection(event) {
+  toggleSelection(event): void {
     if (event.target.checked) {
       this.FormData.value.bestFriend = true;
     }

@@ -2,17 +2,26 @@
 
 - Repository: `basic-angular-form`
 - Type of Challenge: `Learning`
-- Duration: `3 days`
+- Duration: `2 days`
 - Solo challenge
 
 ## Learning Objectives 
-After this learning challenge, you'll be able to:
+
 - Use the angular cli commands
 - Have a basic understanding of typescript
 - Generate components and services in angular
 - Configure a provided node API
 - Make a basic angular form
 - Send http requests from an angular app to a node server
+
+My site:
+
+![homepage](Angular-form/src/assets/friends.png)
+
+Use of reactive forms:
+
+![form](Angular-form/src/assets/friends2.png)
+
 
 ## The Mission
 You have been part of becode for quite some time, and you've made a lot of friends in the process. Make an Angular application on which your friends can fill in their data so you can have it in your node.js friendlist api.
@@ -33,32 +42,6 @@ Form validation
 A Friend list, do this by sending a GET request to your local node server.
 
 A POST request to add a friend to your friend list.
-
-
-### Nice-to-have features
-
-- Make sure the email and phone number are actually emails and phone numbers.
-- Make it as easy as possible for a user to add a phone number, following phone numbers could all be valid:
-    - 0488888888
-    - +324888 88888
-    - 04 88 88 88 88
-    - 0      4 8     8 8888 88
-    - It's okay to only take Belgian phone numbers into account.
-- Make seperate pages for adding a friend and your friend list.
-- Make a "best friend" list by adding a favourite checkbox to the form
-    - You can also make a seperate page for your best friends
-    - You'll have to make a new app.GET function in your node server
-- Add extra fields, whatever you like. Examples:
-    - Profile picture
-    - Signature move
-    - Favourite meme
-    - ...
-- Think of your own new app.GET function, the possibilities are endless. Examples:
-    - A list of all the people that like php
-    - An amount of random friends from your list
-    - A list of all the people between the age of 30 and 40
-    - ...
-
 
 ### Steps
 1. Clone this repository locally
@@ -141,15 +124,13 @@ A POST request to add a friend to your friend list.
     - To do this we'll use the ngFor loop, add the following code to a div: <code>*ngFor="let friend of allFriends"</code>.
     - In this div, if you enter {{ friend.email }} for example. You'll see that on your page you'll see all the emails of your friends displayed.
     - Now display all details of your friends, try adding new friends in the process. It updates instantly!
-19. You now have all the must-have features. Congratulations! If you have time left, be sure to take a look at the nice-to-have features. Here are some suggestions as well:
+19. You now have all the must-have features. Congratulations! If you have time left, here are some nice-to-have features:
     - Try removing people from your friend list based on email. Post the email of a friend, find the friend on the server and pop it out of the array.
     - Try updating the data from a friend based on email. Same thing, post the email and find that friend, update the values.
-    - Make seperate pages by generating new components! You'll have to look into routing as well!
-    - Get creative!
+    - Make seperate pages for adding a friend and your friend list by generating new components! You'll have to look into routing as well!
+    - Make sure the email and phone number are actually emails and phone numbers.
+    - Make a "best friend" list by adding a favourite checkbox to the form & make a seperate page for that.
+    - Add extra fields, whatever you like.
 20. Congratulations, you survived the first steps of Angular and Node. I'm proud of you!
 
-## Run to the hills!
 
-Go jump into it, you've got this! Like Einstein once said: “In the middle of every difficulty lies opportunity.”.
-
-![Einstein!](https://media.giphy.com/media/3o6ZsSPemnF31VogEw/giphy.gif)
