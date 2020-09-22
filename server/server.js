@@ -15,7 +15,7 @@ app.all("/*", function(req, res, next){
 });
 
 
-let allFriends = [{firstName: 'Coach', lastName: 'Tim', email: 'tim.broos@becode.org', phone: '0469420666', signatureMove: 'Yeet', language: 'Javascript'}, {firstName: 'Yuri', lastName: 'Franken', email: 'yuri@becode.org', phone: '036640768', language: 'Phyton', bestFriend: true}];
+let allFriends = [{firstName: 'Coach', lastName: 'Tim', email: 'tim.broos@becode.org', phone: '0469420666', signatureMove: 'Yeet', language: 'Javascript'}, {firstName: 'Katty', lastName: 'Debruyn', email: 'katty@hello.be', phone: '036640768', language: 'Phyton', bestFriend: true}];
 
 //Define how your API handles a get or a post request.
 
